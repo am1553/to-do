@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(93, 93, 253), rgb(255, 154, 255));
+    
+    .card {
+        background-color: red;
+        width: 30rem;
+        height: 80vh;
+        max-width: 50rem;
+        margin: 0px 20px 0px 20px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 10px;
+        box-shadow: 0px 10px 10px -3px rgba(198, 0, 216, 0.5);
+
+        .title {
+            text-align: center;
+            padding: 20px 0px 20px;
+            color: rgb(83, 83, 83);
+            border-bottom: 2px dashed;
+        }
+
+        .to-do-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            height: 90%;
+
+            form {
+                display: flex;
+                justify-content: space-around;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                margin-bottom: 3rem;
+                
+                .to-do-input {
+                    width: 80%;
+                    height: 1.5rem;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 15px;
+                }
+
+                button {
+                    border: none;
+                    font-size: 16px;
+                    color: rgb(83, 83, 83);
+                }
+            }
+
+            .to-do-list {
+                position: absolute;
+                min-width: 85%;
+                top: 0;
+                .todo {
+                    background-color: rgba(179, 179, 179, 0.5);
+                    font-size: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.5rem;
+                    border-radius: 10px;
+                    margin: 10px 0px 0px;
+                    .toDoTask {
+                        list-style: none;
+                    }
+
+                    .groupedBtn {
+                        width: 3rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        
+                        .complete-btn {
+                            border: none;
+                            padding: 3px;
+                            border-radius: 5px;
+                            color: rgb(100, 100, 100);
+                            font-size: 10px;
+
+                            .fa-check {
+                                pointer-events: none;
+                            }
+                        }
+
+                        .delete-btn {
+                            border: none;
+                            padding: 3px;
+                            border-radius: 5px;
+                            color: rgb(100, 100, 100);
+                            font-size: 10px;
+
+                            .fa-trash {
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
